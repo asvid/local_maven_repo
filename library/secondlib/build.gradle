@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'maven-publish'
-
+apply from: '../publish_local.gradle'
 
 def artifactId = 'secondlib'
 def groupId = 'io.github.asvid'
@@ -36,16 +35,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-}
-
-publishing {
-    publications {
-        library(MavenPublication) {
-            setGroupId(groupId)
-            setArtifactId(artifactId)
-            version android.defaultConfig.versionName
-
-            artifact(bundleRelease)
-        }
-    }
 }
