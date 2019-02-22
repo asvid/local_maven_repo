@@ -9,11 +9,9 @@ publishing {
 
       println "publishing: " + groupId
       println "publishing: " + artifactId
-      println "publishing: " + bundleRelease
+      println "publishing: " + bundleReleaseAar
 
-
-
-      artifact(bundleRelease)
+      artifact(bundleReleaseAar)
     }
   }
 }
