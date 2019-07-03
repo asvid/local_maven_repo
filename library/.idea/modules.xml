@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/firstlib/firstlib.iml" filepath="$PROJECT_DIR$/firstlib/firstlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/library.iml" filepath="$PROJECT_DIR$/.idea/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/library.iml" filepath="$PROJECT_DIR$/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/secondlib/secondlib.iml" filepath="$PROJECT_DIR$/secondlib/secondlib.iml" />
     </modules>

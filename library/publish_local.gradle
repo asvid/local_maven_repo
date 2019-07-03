@@ -1,17 +1,19 @@
 apply plugin: 'maven-publish'
 
-publishing {
-  publications {
-    library(MavenPublication) {
-      setGroupId(project.groupId)
-      setArtifactId(project.artifactId)
-      version android.defaultConfig.versionName
+project.afterEvaluate {
+    publishing {
+        publications {
+            library(MavenPublication) {
+                setGroupId project.groupId
+                setArtifactId project.artifactId
+                version android.defaultConfig.versionName
 
-      println "publishing: " + groupId
-      println "publishing: " + artifactId
-      println "publishing: " + bundleReleaseAar
+                artifact bundleReleaseAar
 
-      artifact(bundleReleaseAar)
+                println "publishing: " + groupId
+                println "publishing: " + artifactId
+                println "publishing: " + bundleReleaseAar
+            }
+        }
     }
-  }
 }
